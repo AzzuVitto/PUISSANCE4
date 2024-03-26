@@ -1,0 +1,112 @@
+body {
+    background-image: url(../images/18@2x.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+h1 {
+    color: #2345f1;
+    /* text-shadow: 5px 1px black; */
+    text-shadow: 5px 5px 3px black;
+
+    font-size: 4em;
+    font-family: 'Tektur', sans-serif;
+}
+
+.butt {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+#gameContainer {
+    background-color: #3f51b58c;
+    margin-bottom: 50px;
+    height: 60vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 7px 10px 20px 20px #3f51b58c;
+
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.cell {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 3em;
+    background-color: white;
+
+}
+.cell-clignote  {
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 3em;
+    animation-duration: .8s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+ }
+ 
+ 
+#replay {
+    margin-top: 30px;
+}
+
+#alone,
+#cpu,
+#replay {
+    border: none;
+    font-family: 'Tektur', sans-serif;
+    color: #E91E63;
+    font-size: large;
+    text-shadow: 1px 1px 2px #673AB7;
+}
+
+#congrat {
+    text-shadow: 2px 2px #2196f391;
+    font-size: 2em;
+    font-family: 'Tektur', sans-serif;
+    color: firebrick;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        
+}
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    #gameContainer {
+        width: 100%;
+    }
+
+    .cell {
+        font-size: 2em;
+    }
+}
+@keyframes clignoter {
+    0%   { opacity:1; }
+    40%   {opacity:0; }
+    100% { opacity:1; }
+  }
